@@ -15,16 +15,16 @@ public class PlayerController : MonoBehaviour
      * - 이동 방향 벡터 
      */
     [Header("이동 변수들")]
-    private Rigidbody _rigid;
     public float moveSpeed;
     public float jumpPower;
+    public LayerMask groundLayer;
+    private Rigidbody _rigid;
     private Vector2 _inputMovementDirection;
     private Vector3 _movementDirection;
-    public LayerMask groundLayer;
 
     [Header("레이(Ray) 변수")]
-    public float heightOffset = 0.5f; // 아래로 쏘는 레이 길이
-    public float horizontalOffset = 0.2f; // 앞으로 쏘는 레이 길이 
+    public float heightOffset = 0.5f; // 레이 위치 변수
+    public float horizontalOffset = 0.2f; // 레이 위치 변수
     public float groundCheckRayDistance = 0.6f; // 레이 길이 
 
     private void Awake()

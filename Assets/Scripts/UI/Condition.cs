@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Condition : MonoBehaviour
 {
+    [Header("체력 변수들")]
     public float curValue; // 현재 체력 
     public float startValue; // 시작 체력 
     public float maxValue; // 최대 체력
@@ -19,14 +18,14 @@ public class Condition : MonoBehaviour
 
     void Update()
     {
-        // UI 업데이트 
+        // 체력바 UI 업데이트 
         uiBar.fillAmount = GetPercentage();
     }
 
-    // FillAmount 값 반환 메서드 
+    // FillAmount 값을 계산해서 반환해주는 메서드 
     float GetPercentage()
     {
-        return curValue / maxValue;
+        return curValue / maxValue; // curValue만 수정되면 Update에서 자동으로 UI가 업디이트된다. 
     }
 
     // curValue 업데이트 메서드들 -> 외부에서 호출 -> Update에서 현재 체력이 업데이트됨. 

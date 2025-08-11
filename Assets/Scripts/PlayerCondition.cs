@@ -1,9 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerCondition : MonoBehaviour
 {
+    [Header("참조 변수들")]
     public UICondition uiCondition;
 
     public Condition health
@@ -11,11 +10,12 @@ public class PlayerCondition : MonoBehaviour
         get { return uiCondition.health; }
     }
 
-    public float noHunberHealthDecay;
+    [Header("체력감소 변수")]
+    public float noHungerHealthDecay;
 
     void Update()
     {
-        health.Subtract(noHunberHealthDecay * Time.deltaTime);
+        health.Subtract(noHungerHealthDecay * Time.deltaTime);
 
         if(health.curValue == 0f)
         {
@@ -23,8 +23,20 @@ public class PlayerCondition : MonoBehaviour
         }
     }
 
-    void Die()
+    public void Die()
     {
         Debug.Log("죽었다");
     }
+
+    // 체력 회복 
+    public void Heal(float amount)
+    {
+        health.Add(amount);
+    }
+
+    // 
+    //public void Eat(float amount)
+    //{
+
+    //}
 }
