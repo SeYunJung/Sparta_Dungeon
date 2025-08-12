@@ -44,6 +44,12 @@ public class PlayerController : MonoBehaviour
     // canLook = false이면 인벤토리가 켜져있는 상태 (카메라가 회전할 수 없는 상태)
     public Action inventoryAction; // 인벤토리를 열었을 때 실행될 델리게이트 -> 언제 델리게이트에 메서드를 넣는가? -> UIInventory Start에서
 
+    [Header("카메라")]
+    public GameObject mainCamera;
+    public GameObject subCamera;
+
+    public bool infiniteJump = false;
+
     private void Awake()
     {
         _rigid = GetComponent<Rigidbody>();
@@ -112,8 +118,22 @@ public class PlayerController : MonoBehaviour
     // Space bar를 누르면 실행되는 메서드
     public void OnJump(InputAction.CallbackContext context)
     {
+        if(context.phase == InputActionPhase.Started && infiniteJump)
+        {
+            // 스태미나가 충분한지? 
+            if (stamina >= staminaCost)
+            {
+                // 충분하면 스태미나(stamina)를 staminaCost만큼 감소 
+                stamina -= staminaCost;
+
+                CharacterManager.Instance.Player.playerCondition.UpdateStamina(stamina);
+
+                // 플레이어 위치에서 위쪽 방향으로 순간적인 힘을 줘서 점프하게 하기 
+                _rigid.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
+            }
+        }
         // Space bar를 누르고, 땅에 닿지 않으면
-        if(context.phase == InputActionPhase.Started && IsGrounded())
+        else if(context.phase == InputActionPhase.Started && IsGrounded())
         {
             //// 플레이어 위치에서 위쪽 방향으로 순간적인 힘을 줘서 점프하게 하기 
             //_rigid.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
@@ -197,6 +217,24 @@ public class PlayerController : MonoBehaviour
             // 델리게이트를 사용해보자. 
             inventoryAction?.Invoke();
             ToggleCursor(); // 마우스 커서 보이게하기, 안 보이게하기. 
+        }
+    }
+
+    // Tab키 눌렀을 때 실행되는 메서드
+    public void OnChangeCameraView(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Started)
+        {
+            if (mainCamera.activeInHierarchy)
+            {
+                mainCamera.SetActive(false);
+                subCamera.SetActive(true);
+            }
+            else if(subCamera.activeInHierarchy)
+            {
+                subCamera.SetActive(false);
+                mainCamera.SetActive(true);
+            }
         }
     }
 

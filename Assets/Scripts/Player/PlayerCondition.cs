@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerCondition : MonoBehaviour
@@ -50,5 +51,16 @@ public class PlayerCondition : MonoBehaviour
     public void UpdateStamina(float value)
     {
         stamina.UpdateStamina(value);
+    }
+
+    public void InfiniteJump()
+    {
+        StartCoroutine(DoubleJumpTimer());
+    }
+
+    public IEnumerator DoubleJumpTimer()
+    {
+        yield return new WaitForSeconds(5.0f);
+        CharacterManager.Instance.Player.playerController.infiniteJump = true;
     }
 }

@@ -287,6 +287,10 @@ public class UIInventory : MonoBehaviour
                     case ConsumableType.Speed:
                         _playerCondition.SpeedUp(_selectedItem.consumables[i].value, _characterManager.Player.playerController); // 스피드 업 
                         break;
+                    case ConsumableType.InfiniteJump:
+                        _characterManager.Player.playerController.infiniteJump = true;
+                        _playerCondition.InfiniteJump(); // 5초 쿨타임. 
+                        break;
                 }
             }
 
