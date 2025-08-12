@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     [Header("이동 변수들")]
     public float moveSpeed;
     public float jumpPower;
+    public float platformJumpPower;
     public LayerMask groundLayer;
     private Rigidbody _rigid;
     private Vector2 _inputMovementDirection;
@@ -197,5 +198,13 @@ public class PlayerController : MonoBehaviour
         // 마우스 커서가 보이면(toggle = false) 카메라가 회전할 수 있게(canLook = true)
         // 마우스 커서가 안 보이면(toggle = true) 카메라가 회전할 수 없게(canLook = false)
         canLook = !toggle; // toggle 값(커서가 보이는지 아닌지)에 따라 인벤토리가 켜지는지 아닌지를 bool 값으로 저장. 
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Platform"))
+        {
+            _rigid.AddForce(Vector3.up * platformJumpPower, ForceMode.Impulse);
+        }
     }
 }
