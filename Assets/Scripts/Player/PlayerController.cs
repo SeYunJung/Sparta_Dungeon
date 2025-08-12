@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
      * - 이동 방향 벡터 
      */
     [Header("이동 변수들")]
+    public float stamina;
+    public float staminaCost;
     public float moveSpeed;
     public float jumpPower;
     public float platformJumpPower;
@@ -113,8 +115,20 @@ public class PlayerController : MonoBehaviour
         // Space bar를 누르고, 땅에 닿지 않으면
         if(context.phase == InputActionPhase.Started && IsGrounded())
         {
-            // 플레이어 위치에서 위쪽 방향으로 순간적인 힘을 줘서 점프하게 하기 
-            _rigid.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
+            //// 플레이어 위치에서 위쪽 방향으로 순간적인 힘을 줘서 점프하게 하기 
+            //_rigid.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
+
+            // 스태미나가 충분한지? 
+            if(stamina >= staminaCost)
+            {
+                // 충분하면 스태미나(stamina)를 staminaCost만큼 감소 
+                stamina -= staminaCost;
+
+                CharacterManager.Instance.Player.playerCondition.UpdateStamina(stamina);
+
+                // 플레이어 위치에서 위쪽 방향으로 순간적인 힘을 줘서 점프하게 하기 
+                _rigid.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
+            }
         }
     }
 

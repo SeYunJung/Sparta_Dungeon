@@ -7,6 +7,7 @@ public class PlayerCondition : MonoBehaviour
 
     public Condition health { get { return uiCondition.health; } }
     public Condition speed { get { return uiCondition.speed; } }
+    public Condition stamina { get { return uiCondition.stamina; } }
 
     [Header("체력감소 변수")]
     public float noHungerHealthDecay;
@@ -43,5 +44,11 @@ public class PlayerCondition : MonoBehaviour
     {
         //speed.Add(amount);
         speed.SpeedUp(amount, playerController);
+    }
+
+    // 스태미나 업데이트
+    public void UpdateStamina(float value)
+    {
+        stamina.UpdateStamina(value);
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class Condition : MonoBehaviour
 {
-    [Header("체력이나 스피드 변수들")]
+    [Header("체력/스피드/스태미나 변수들")]
     public float curValue; // 현재 체력/스피드 
     public float startValue; // 시작 체력/스피드 
     public float maxValue; // 최대 체력/스피드
@@ -55,5 +55,10 @@ public class Condition : MonoBehaviour
         yield return new WaitForSeconds(3.0f);
         playerController.moveSpeed -= value;
         curValue = curValue - value;
+    }
+
+    public void UpdateStamina(float stamina)
+    {
+        curValue = stamina;
     }
 }
