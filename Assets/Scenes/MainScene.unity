@@ -239,6 +239,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31590f81cf527d04a8e6e8eff455292a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slots: []
+  inventoryWindow: {fileID: 4623911}
+  slotPanel: {fileID: 1654517146}
+  selectedItemName: {fileID: 1589882719}
+  selectedItemDescription: {fileID: 1797737684}
+  selectedStatName: {fileID: 363596877}
+  selectedStatValue: {fileID: 506617563}
+  useButton: {fileID: 1764462404}
+  equipButton: {fileID: 565531648}
+  unequipButton: {fileID: 498908242}
+  dropButton: {fileID: 1147940957}
 --- !u!1 &75037722
 GameObject:
   m_ObjectHideFlags: 0
@@ -2166,6 +2177,7 @@ MonoBehaviour:
   minXLook: -85
   maxXLook: 85
   lookSensitivity: 0.1
+  canLook: 1
 --- !u!114 &522806641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2256,7 +2268,19 @@ MonoBehaviour:
     m_ActionId: 2f9f3dfc-c745-4ad1-a0ac-16cd85b62e3e
     m_ActionName: Player/Look[/Mouse/delta]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 522806640}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnInventory
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: a082a185-b721-449f-acf2-4800988cd75b
     m_ActionName: Player/Inventory[/Keyboard/i]
   m_NeverAutoSwitchControlSchemes: 0
