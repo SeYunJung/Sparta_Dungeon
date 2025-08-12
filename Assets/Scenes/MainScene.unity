@@ -2851,7 +2851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11ee59688fbd41343821e80b4c7d6cd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curValue: 0
+  curValue: 3
   startValue: 3
   maxValue: 10
   passiveValue: 1
