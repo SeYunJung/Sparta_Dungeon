@@ -51,7 +51,9 @@ public class Condition : MonoBehaviour
     private IEnumerator Coroutine_SpeedUp(float value, PlayerController playerController)
     {
         playerController.moveSpeed += value;
+        curValue = curValue + value;
         yield return new WaitForSeconds(3.0f);
         playerController.moveSpeed -= value;
+        curValue = curValue - value;
     }
 }
