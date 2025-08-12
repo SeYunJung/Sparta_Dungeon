@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8364404114547960959}
   - component: {fileID: 8099051407926184954}
   - component: {fileID: 2124118187506005112}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mushroom_01_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 5291147280545769536}
   - component: {fileID: 2067583778641177103}
   - component: {fileID: 6628407441611997220}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mushroom_01_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 6915383409244413028}
   - component: {fileID: 5959674230111704817}
   - component: {fileID: 4283030630007700278}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Item_Mushroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -272,7 +272,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6996016739315976583}
   - component: {fileID: 8066089720757111031}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mushroom_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

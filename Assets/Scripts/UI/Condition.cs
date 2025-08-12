@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -39,5 +40,18 @@ public class Condition : MonoBehaviour
     {
         // 변환된 체력(curValue - value)가 최소 체력(0)보다 작을 경우 0으로 업데이트 
         curValue = Mathf.Max(curValue - value, 0);
+    }
+
+    // 스피드 업
+    public void SpeedUp(float value, PlayerController playerController)
+    {
+        StartCoroutine(Coroutine_SpeedUp(value, playerController));
+    }
+
+    private IEnumerator Coroutine_SpeedUp(float value, PlayerController playerController)
+    {
+        playerController.moveSpeed += value;
+        yield return new WaitForSeconds(3.0f);
+        playerController.moveSpeed -= value;
     }
 }

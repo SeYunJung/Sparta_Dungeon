@@ -257,7 +257,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 126416231527210347}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2713647229338807663}
+        m_TargetAssemblyTypeName: ItemSlot, Assembly-CSharp
+        m_MethodName: OnClickButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6579796204826022221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,6 +297,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0298f689ef4c834785ad5f23bd12287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemData: {fileID: 0}
+  slotIndex: 0
+  isEquipped: 0
+  quantity: 0
+  button: {fileID: 8729376376012874574}
+  icon: {fileID: 1134212149701038881}
+  quantityText: {fileID: 8837107019313060829}
+  inventory: {fileID: 0}
 --- !u!1 &6085026110099160315
 GameObject:
   m_ObjectHideFlags: 0

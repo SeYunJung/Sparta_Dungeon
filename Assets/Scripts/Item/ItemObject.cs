@@ -30,7 +30,8 @@ public class ItemObject : MonoBehaviour, IInteractable
         // 플레이어에게 아이템 정보를 넘겨준다. 
         CharacterManager.Instance.Player.itemData = data;
 
-        // 델리게이트 실행? 
+        // 델리게이트 실행 
+        // 아이템을 먹었을 때 순차적으로 메서드들을 실행 -> 아이템을 인벤토리에 추가하는 메서드, .. 
         CharacterManager.Instance.Player.addItem?.Invoke();
 
         // 맵에서 사라지게 하기

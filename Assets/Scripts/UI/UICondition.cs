@@ -5,6 +5,7 @@ public class UICondition : MonoBehaviour
 {
     [Header("상태 UI변수들")]
     public Condition health;
+    public Condition speed;
 
     [Header("참조 변수들")]
     public CharacterManager characterManager;
