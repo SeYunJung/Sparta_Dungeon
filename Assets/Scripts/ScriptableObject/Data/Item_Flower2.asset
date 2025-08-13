@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item_Flower2
   m_EditorClassIdentifier: 
   displayName: "\uAF432"
-  description: "5\uCD08\uB3D9\uC548 \uB354\uBE14\uC810\uD504\uAC00 \uAC00\uB2A5\uD574\uC9D1\uB2C8\uB2E4."
+  description: "5\uCD08\uB3D9\uC548 \uBB34\uD55C\uC810\uD504\uAC00 \uAC00\uB2A5\uD574\uC9D1\uB2C8\uB2E4."
   itemType: 1
   itemImage: {fileID: 21300000, guid: 6f42501a08f72b24fa33edf73c2236ef, type: 3}
   dropPrefab: {fileID: 4398900716171712786, guid: 45aee7bb95d8a8d4f85cccb32934bf3d, type: 3}
