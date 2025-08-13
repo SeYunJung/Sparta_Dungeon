@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     public float platformJumpPower;
     public LayerMask groundLayer;
     private Rigidbody _rigid;
+    public Rigidbody Rigid { get { return _rigid; } }
     private Vector2 _inputMovementDirection;
     private Vector3 _movementDirection;
 
