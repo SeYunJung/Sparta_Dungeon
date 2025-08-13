@@ -1,6 +1,6 @@
 <div align="center">
 <h2> 🎮 스파르타 던전 탐험 프로젝트 🎮 </h2>
-<img width="752" height="417" alt="image" src="https://github.com/user-attachments/assets/3dd58df7-0c97-43ca-b884-bf077fde7559" />
+<img width="752" height="417" alt="image" src="https://github.com/user-attachments/assets/d7b0634d-85e7-4466-9a73-278803e7106f" />
 <p>
 <b>'스파르타 던전'</b>은 작은 숲 속에서 아이템을 먹고, 발판에서 점프하고, 발판으로 이동할 수 있는 게임입니다.
 </p>
@@ -30,7 +30,7 @@
 <br>
 
 ## 게임 설명
-|![image](https://github.com/user-attachments/assets/3dd58df7-0c97-43ca-b884-bf077fde7559)|
+|![image](https://github.com/user-attachments/assets/d7b0634d-85e7-4466-9a73-278803e7106f)|
 |:---:|
 |시작 화면|
 
