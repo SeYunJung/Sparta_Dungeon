@@ -30,14 +30,9 @@
 <br>
 
 ## 게임 설명
-|![image](https://github.com/user-attachments/assets/d7b0634d-85e7-4466-9a73-278803e7106f)|
-|:---:|
-|시작 화면|
-
-|![image](https://github.com/user-attachments/assets/045b37d2-aefb-4104-87f1-12aa64c1c4d3)|![image](https://github.com/user-attachments/assets/7cf108e0-091a-4b8d-87ff-a94aa5bc81cf)|
+|![image](https://github.com/user-attachments/assets/d7b0634d-85e7-4466-9a73-278803e7106f)|![image](https://github.com/user-attachments/assets/379772a6-dd32-4908-ae42-e1a1c4787413)|
 |:---:|:---:|
-|미니게임 화면|NPC 상호작용 화면|
-
+|시작 화면|인벤토리|
 
 <b>'Modern City'</b>에서는 NPC와 상호작용, 미니게임을 플레이할 수 있습니다. 
 
