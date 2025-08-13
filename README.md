@@ -51,10 +51,11 @@
 <br>
 
 ## 게임 시연
-![NPC](https://github.com/user-attachments/assets/64905ab4-bfb0-4833-8923-f2207614893a)
+![다양항 아이템_gif](https://github.com/user-attachments/assets/2a991a4a-81a5-42fd-a971-1db45ed04e8d)
 ![MiniGame](https://github.com/user-attachments/assets/b258c353-0ab0-4b7b-95cc-2f914daeccf6)
 ![Leader Board](https://github.com/user-attachments/assets/acebb684-ac02-4a24-aad1-b4d24194173c)
 <br>
+
 
 ## 필수 기능
 (기본 이동 및 점프)
