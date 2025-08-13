@@ -52,8 +52,10 @@
 
 ## 게임 시연
 ![다양항 아이템_gif](https://github.com/user-attachments/assets/2a991a4a-81a5-42fd-a971-1db45ed04e8d)
-![MiniGame](https://github.com/user-attachments/assets/b258c353-0ab0-4b7b-95cc-2f914daeccf6)
-![Leader Board](https://github.com/user-attachments/assets/acebb684-ac02-4a24-aad1-b4d24194173c)
+![발판_gif](https://github.com/user-attachments/assets/b2d19d4c-f7ec-4d1d-9623-dca47dbfdcb1)
+![인벤토리_gif](https://github.com/user-attachments/assets/987e16c9-2bee-4996-b837-6868385d3a1d)
+![인칭 전환_gif](https://github.com/user-attachments/assets/85c6b592-38e1-44f7-93e6-c8de2b102c82)
+![점프대_gif](https://github.com/user-attachments/assets/6bf08a9d-3497-4d43-9200-e99227150fad)
 <br>
 
 
